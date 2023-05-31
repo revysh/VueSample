@@ -1,12 +1,13 @@
 window.onload = function(){
 
     Vue.component('app-username',{
+        props:['username'],
         data: function(){
             return {
-                userName: 'Ravi'
+                //userName: 'Ravi'
             }
         },
-        template: '<p>{{userName}}</p>'
+        template: '<p>{{username}}</p>'
     });
 
     new Vue({
