@@ -5,12 +5,9 @@
         <script src="index.js"></script>
     </head>
     <body>        
-        <div id="app">
-          <input type="text" v-model="userInput">
-          <button v-on:click="addTodo">Add Todo</button>
-          <ul>
-            <li v-for="todo in todos" v-on:click="removeTodo(todo)">{{ todo.value }}</li>
-          </ul>
+        <div id="raviapp">
+          <p>{{name}}</p>
+          <button v-on:click="changeName">Change</button>
         </div>        
     </body>
 </html>
