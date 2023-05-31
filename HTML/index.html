@@ -7,8 +7,8 @@
     </head>
     <body>        
         <div id="raviapp1">
-          <app-username :username="'Ravi'"></app-username>
-          <app-username :username="'Shankar'"></app-username>
+          <app-username :username="'Ravi'" @usrclicked="userWasClicked($event)"></app-username>
+          <app-username :username="'Shankar'" @usrclicked="userWasClicked($event)"></app-username>
           <p :class="{updated: name != 'RaviLoad' ? true:false}">{{name}}</p>
           <p v-if="name != 'RaviLoad'">Name updated !!!</p>
           <button @click="changeName">Change</button>

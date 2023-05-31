@@ -10,7 +10,7 @@ window.onload = function(){
         template: '<p @click="userNameClicked()">{{username}}</p>',
         methods:{
             userNameClicked: function(){
-                alert(this.username);
+                this.$emit('usrclicked',this.username);
             }
         }
     });
@@ -30,6 +30,9 @@ window.onload = function(){
             },
             getColor: function(number){
                 return number % 2 == 0 ? 'red':'green'; 
+            },
+            userWasClicked: function(userName){
+                alert(userName);
             }
         }
     });
