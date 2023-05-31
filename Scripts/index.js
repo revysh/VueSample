@@ -7,7 +7,12 @@ window.onload = function(){
                 //userName: 'Ravi'
             }
         },
-        template: '<p>{{username}}</p>'
+        template: '<p @click="userNameClicked(username)">{{username}}</p>',
+        methods:{
+            userNameClicked: function(username){
+                alert(username);
+            }
+        }
     });
 
     new Vue({
@@ -18,7 +23,7 @@ window.onload = function(){
         },
         methods: {
             changeName: function(){
-                this.name = 'Ravi Changed' 	
+                this.name = 'Ravi Changed';
             },
             addElement: function(){
                 this.elements.push(this.elements.length+1);
