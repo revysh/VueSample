@@ -6,12 +6,15 @@
         <link type="text/css" rel="stylesheet" href="..\styles\index.css"/>
     </head>
     <body>        
-        <div id="raviapp">
+        <div id="raviapp1">
           <p :class="{updated: name != 'RaviLoad' ? true:false}">{{name}}</p>
           <p v-if="name != 'RaviLoad'">Name updated !!!</p>
           <button @click="changeName">Change</button>
           <button @click="addElement">Add Element</button>
           <ul><li v-for="element in elements" :id="'el' + element" :style="{backgroundColor: getColor(element)}" >Element {{element}}</li></ul>
+        </div>
+        <div id="raviapp2">
+            <p>{{message}}</p>    
         </div>         
     </body>
 </html>

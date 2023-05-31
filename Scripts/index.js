@@ -1,6 +1,6 @@
 window.onload = function(){
     new Vue({
-        el: '#raviapp',
+        el: '#raviapp1',
         data: {
             name:'RaviLoad',
             elements: []
@@ -15,6 +15,13 @@ window.onload = function(){
             getColor: function(number){
                 return number % 2 == 0 ? 'red':'green'; 
             }
+        }
+    });
+
+    new Vue({
+        el: '#raviapp2',
+        data: {
+            message:'Second Vue App'
         }
     });
 }
