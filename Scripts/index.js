@@ -7,10 +7,10 @@ window.onload = function(){
                 //userName: 'Ravi'
             }
         },
-        template: '<p @click="userNameClicked(username)">{{username}}</p>',
+        template: '<p @click="userNameClicked()">{{username}}</p>',
         methods:{
-            userNameClicked: function(username){
-                alert(username);
+            userNameClicked: function(){
+                alert(this.username);
             }
         }
     });
