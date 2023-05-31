@@ -1,4 +1,14 @@
 window.onload = function(){
+
+    Vue.component('app-username',{
+        data: function(){
+            return {
+                userName: 'Ravi'
+            }
+        },
+        template: '<p>{{userName}}</p>'
+    });
+
     new Vue({
         el: '#raviapp1',
         data: {
