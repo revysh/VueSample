@@ -1,0 +1,26 @@
+<html>
+    <head>        
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+        <script src="..\scripts\hobby.js"></script>
+        <!-- <link type="text/css" rel="stylesheet" href="..\styles\hobby.css"/> -->
+    </head>
+    <body>
+        
+        <div id="app">
+            <input type="text" v-model="userHobby">
+            <button v-on:click="addHobby">New Hobby</button>
+            <p v-if="hobbyWasDeleted">Hobby was deleted!</p>
+            <p 
+              v-bind:style="{color: hobbies.length > 3 ? 'red' : 'black'}"
+              v-bind:class="{'multiple-hobbies': hobbies.length > 3}">Hobbies: {{ hobbies.length }}</p>
+            <ul>
+              <app-hobby 
+                v-for="hby in hobbies"
+                v-bind:hobby="hby"
+                v-on:hobbyremoved="removeHobby($event)"
+                ></app-hobby>
+            </ul>
+          </div>  
+    </body>
+</html>
